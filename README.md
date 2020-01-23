@@ -1,4 +1,4 @@
 # Shopping-App | Flutter
 
-<img src="ss1.png">
-<img src="ss2.png">
+<img height="480px" src="ss1.png" hspace='20'><img height="480px" src="ss2.png">
+
