@@ -31,6 +31,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   }
 
   @override
+  // ignore: must_call_super
   void didChangeDependencies() {
     if (_isInit) {
       setState(() {

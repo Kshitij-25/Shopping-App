@@ -25,7 +25,7 @@ class AuthScreen extends StatelessWidget {
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                stops: [0, 1],
+                // stops: [0, 1],
               ),
             ),
           ),
@@ -58,6 +58,7 @@ class AuthScreen extends StatelessWidget {
                       child: Text(
                         'MyShop',
                         style: TextStyle(
+                          // ignore: deprecated_member_use
                           color: Theme.of(context).accentTextTheme.title.color,
                           fontSize: 50,
                           fontFamily: 'Anton',
@@ -100,6 +101,7 @@ class _AuthCardState extends State<AuthCard>
   var _isLoading = false;
   final _passwordController = TextEditingController();
   AnimationController _controller;
+  // ignore: unused_field
   Animation<Size> _heightAnimation;
   Animation<double> _opacityAnimation;
   Animation<Offset> _slideAnimation;
@@ -244,6 +246,7 @@ class _AuthCardState extends State<AuthCard>
                 TextFormField(
                   decoration: InputDecoration(labelText: 'E-mail'),
                   keyboardType: TextInputType.emailAddress,
+                  // ignore: missing_return
                   validator: (value) {
                     if (value.isEmpty || !value.contains('@')) {
                       return 'Invalid E-mail';
@@ -257,6 +260,7 @@ class _AuthCardState extends State<AuthCard>
                   decoration: InputDecoration(labelText: 'Password'),
                   obscureText: true,
                   controller: _passwordController,
+                  // ignore: missing_return
                   validator: (value) {
                     if (value.isEmpty || value.length < 6) {
                       return 'Password is too short';
@@ -283,6 +287,7 @@ class _AuthCardState extends State<AuthCard>
                             InputDecoration(labelText: 'Confirm Password'),
                         obscureText: true,
                         validator: _authMode == AuthMode.Signup
+                            // ignore: missing_return
                             ? (value) {
                                 if (value != _passwordController.text) {
                                   return 'Passwords do not match!';

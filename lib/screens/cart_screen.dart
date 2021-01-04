@@ -36,6 +36,7 @@ class CartScreen extends StatelessWidget {
                       '\$${cart.totalAmount}',
                       style: TextStyle(
                           color:
+                              // ignore: deprecated_member_use
                               Theme.of(context).primaryTextTheme.title.color),
                     ),
                     backgroundColor: Theme.of(context).primaryColor,
